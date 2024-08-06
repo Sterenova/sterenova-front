@@ -1,3 +1,6 @@
+import { FaTiktok } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+
 export function BannerComponent() {
     return (
      <section className="banner-slider padding-bottom position-relative cursor-light" id="banner-slider">
@@ -43,10 +46,9 @@ export function BannerComponent() {
 </div>
         <div className="slider-icons">
             <ul className="slider-social banner-social">
-                <li className="animated-wrap"><a className="animated-element" href="https://www.tiktok.com/@sterenova_"><i
-                            className="fab fa-tiktok"></i> </a></li>
+                    <li className="animated-wrap"><a className="animated-element" href="https://www.tiktok.com/@sterenova_"><FaTiktok /> </a></li>
                 <li className="animated-wrap"><a className="animated-element"
-                        href="https://www.instagram.com/sterenova_/?hl=fr"><i className="lab la-instagram"></i> </a></li>
+                        href="https://www.instagram.com/sterenova_/?hl=fr"><GrInstagram /> </a></li>
             </ul>
         </div>
     </section>

@@ -1,3 +1,6 @@
+import { FaMapMarkerAlt, FaPhoneVolume } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 export function ContactComponent() {
   return (
     <section
@@ -68,16 +71,16 @@ export function ContactComponent() {
               </p>
               <ul>
                 <li>
-                  <i className="las la-map-marker addr"></i>Paris{" "}
+                  <FaMapMarkerAlt />Paris{" "}
                 </li>
                 <li>
-                  <i className="las la-phone-volume phone"></i>
+                  <FaPhoneVolume />
                   <span>07 68 36 46 48</span>
                   <span>07 81 98 99 63</span>
                   <span>06 66 99 53 32</span>
                 </li>
                 <li>
-                  <i className="las la-paper-plane email"></i>
+                  <MdEmail/>
                   contact.sterenova@gmail.fr
                 </li>
               </ul>

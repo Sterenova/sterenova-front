@@ -1,3 +1,6 @@
+import { FaTiktok } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+
 export function NavBarComponent() {
     return (
         <header id="home" className="cursor-light">
@@ -74,11 +77,9 @@ export function NavBarComponent() {
                                                 href="mailto:contact.sterenova@gmail.fr">contact.sterenova@gmail.fr</a></span>
                                         </div>
                                         <ul className="social-icons-simple">
-                                            <li><a className="instagram-text-hvr" href="https://www.tiktok.com/@sterenova_"><i
-                                                className="fab fa-tiktok"></i> </a> </li>
+                                            <li><a className="instagram-text-hvr" href="https://www.tiktok.com/@sterenova_"><FaTiktok /></a></li>
                                             <li><a className="instagram-text-hvr"
-                                                href="https://www.instagram.com/sterenova_/?hl=fr"><i
-                                                    className="fab fa-instagram"></i> </a> </li>
+                                                href="https://www.instagram.com/sterenova_/?hl=fr"><GrInstagram/></a></li>
                                         </ul>
                                         <p className="text-white">&copy; 2024 Sterenova.</p>
                                     </div>
