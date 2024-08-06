@@ -1,15 +1,15 @@
 import { FooterComponent } from "../Footer";
 import { NavBarComponent } from "../NavBar";
 
-interface StuffLayoutProps {
+interface EquipmentLayoutProps {
     children: React.ReactNode;
 }
 
-export function StuffLayout({ children }: StuffLayoutProps) {
+export function EquipmentLayout({ children }: EquipmentLayoutProps) {
     return (
         <>
             <NavBarComponent />
-            {children}
+                {children}
             <FooterComponent />
         </>
     )
