@@ -16,7 +16,7 @@ export function NavBarComponent() {
                                         <nav className="navbar navbar-expand-lg">
                                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                                 <div className="navbar-nav ml-auto">
-                                                    <a className="nav-link home active link" href="#">ACCUEIL</a>
+                                                    <a className="nav-link home link" href="#">ACCUEIL</a>
                                                     <a className="nav-link scroll link" href="#portfolio-sec">REALISATIONS</a>
                                                     <a className="nav-link scroll link" href="#gallery-sec">LA GALERIE</a>
                                                     <a className="nav-link scroll link" href="#pricing-sec">NOS PACKS</a>
