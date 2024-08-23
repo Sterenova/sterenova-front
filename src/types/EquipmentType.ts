@@ -1,5 +1,10 @@
+import { PhotoType } from "./PhotoType";
+
 export type EquipmentType = {
     id: number;
     name: string;
-    image: string[];
+    type: string;
+    description: string;
+    price: number;
+    image: PhotoType[];
 };

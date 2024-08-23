@@ -36,7 +36,7 @@ export function PackComponent() {
                 </div>
                 <div className="row pricing-cards" id="pricing-container">
                     <div className="col-12 text-center">
-                        <a href="list-product.html">
+                        <a href="/equipment">
                             <button className="btn pink-btn rounded-pill custom-btn">Voir tout notre materiel</button>
                         </a>
                     </div>

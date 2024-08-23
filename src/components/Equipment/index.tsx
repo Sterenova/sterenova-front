@@ -5,6 +5,11 @@ interface EquipmentComponentProps {
 }
 
 export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
+    if (!Array.isArray(equipments)) {
+        console.error("Expected equipments to be an array, but got", typeof equipments);
+        return null;
+    }
+
     return (
         <div className="row">
             {equipments.map((item: EquipmentType) => (
@@ -15,8 +20,8 @@ export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
                             <h5 className="pricing-title text-center">{item.name}</h5>
                             <div className="col-12">
                                 <div className="portfolio-carousel owl-carousel owl-item">
-                                    {item.image.map((img: string, index: number) => (
-                                        <img key={index} src={img} alt="image" />
+                                    {item.image.map((img) => (
+                                        <img key={img.id} src={img.url} alt="image" />
                                     ))}
                                 </div>
                             </div>

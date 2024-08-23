@@ -11,9 +11,9 @@ export function Home() {
             <>
                 <NavBarComponent/>
                 <BannerComponent/>
+                <RealisationComponent/>
                 <GalleryComponent/>
                 <PackComponent/>
-                <RealisationComponent/>
                 <ContactComponent/>
             </>
         </HomeLayout>

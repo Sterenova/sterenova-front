@@ -10,6 +10,7 @@ export function Equipment() {
     useEffect(() => {
         apiSterenova.get('/equipment')
             .then(response => {
+                console.log(response.data);
                 setEquipments(response.data);
             })
             .catch(error => {
