@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { EquipmentLayout } from "../components/Layout/Equipment";
-import { EquipmentComponent } from "../components/Equipment";
 import { EquipmentType } from "../types/EquipmentType";
 import apiSterenova from "../tools/apiSterenova";
+import { HomeLayout } from "../components/Layout/Home";
+import { HeaderSectionComponent } from "../components/Utils/HeaderSection";
+import { EquipmentComponent } from "../components/Equipment";
 
 export function Equipment() {
     const [equipments, setEquipments] = useState<EquipmentType[]>([]);
@@ -10,7 +11,6 @@ export function Equipment() {
     useEffect(() => {
         apiSterenova.get('/equipment')
             .then(response => {
-                console.log(response.data);
                 setEquipments(response.data);
             })
             .catch(error => {
@@ -19,8 +19,9 @@ export function Equipment() {
     }, []);
 
     return (
-        <EquipmentLayout>
+        <HomeLayout>
+            <HeaderSectionComponent title="Nos" titleImportant="Equipements" description="Nous mettons a votre disposition une large gamme de materiel de sonorisation et d'eclairage professionnel pour repondre a vos besoins et vous offrir une experience inoubliable." />
             <EquipmentComponent equipments={equipments} />
-        </EquipmentLayout>
+        </HomeLayout>
     );
 }

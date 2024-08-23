@@ -6,5 +6,5 @@ export type EquipmentType = {
     type: string;
     description: string;
     price: number;
-    image: PhotoType[];
+    photos: PhotoType[];
 };
