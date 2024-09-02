@@ -11,9 +11,7 @@ export function HomeLayout({ children }: HomeLayoutProps) {
     return (
         <>
             <NavBarComponent />
-            <main className="pt-60">
                 {children}
-            </main>
             <FooterComponent />
         </>
     )

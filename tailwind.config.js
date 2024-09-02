@@ -6,9 +6,14 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#6C63FF',  // Example color from your design
-        secondary: '#FF6584', // Another example
+      backgroundImage: {
+        'gradient-custom': 'linear-gradient(120deg, rgb(98,37,181) 0%, rgb(128,33,181) 40%)',
+      },
+      borderRadius: {
+        'custom': '80px',
+      },
+      rotate: {
+        '-10': '-10deg',
       },
     },
   },
