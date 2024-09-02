@@ -9,7 +9,6 @@ export function Home() {
     return (
         <HomeLayout>
             <>
-                <NavBarComponent/>
                 <BannerComponent/>
                 <GalleryComponent/>
                 <PackComponent/>
