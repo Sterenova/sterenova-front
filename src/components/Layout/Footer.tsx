@@ -2,7 +2,7 @@ import { FaTiktok, FaInstagram, FaArrowUp } from 'react-icons/fa';
 
 export function FooterComponent() {
   return (
-    <footer className="bg-gray-900 text-white py-4 relative">
+    <footer className="bg-gray-900 text-white py-6 relative pb-6 overflow-x-hidden">
       <div className="container mx-auto flex justify-between items-center">
 
         {/* Social Icons */}
