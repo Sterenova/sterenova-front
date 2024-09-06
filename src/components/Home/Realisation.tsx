@@ -34,17 +34,15 @@ export function RealisationComponent() {
         }
     ]
 
-
-
     return (
-        <div id="portfolio-sec" className="flex flex-col justify-center space-y-10 overflow-y-hidden overflow-x-hidden">
-            <div className="flex justify-center items-center relative">
+        <div id="portfolio-sec" className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-y-hidden overflow-x-hidden">
+            <div className="flex items-center relative mb-20">
                 <div className="flex items-center justify-between w-full max-w-screen-lg px-4">
-                    <div className="max-w-sm">
+                    <div className="max-w-sm mr-44">
                         <h4 className="text-red-600/90 font-bold text-5xl">NOS DERNIERS EVENEMENTS <span>& <span
                             className="color">PROJECTS</span></span></h4>
                     </div>
-                    <p className="max-w-sm">
+                    <p className="max-w-sm ml-44">
                         Découvrez nos dernières réalisations et projets, et laissez-vous inspirer par nos créations
                         uniques et originales.
                         <br />
@@ -54,12 +52,12 @@ export function RealisationComponent() {
                 </div>
             </div>
 
-            <div className="flex items-center justify-center w-full max-w-screen-lg px-4">
-                <button onClick={handlePrev} className="absolute left-0 z-10 p-2 text-2xl text-gray-500 hover:text-gray-700">
-                    <FaArrowLeft className=""></FaArrowLeft>
+            <div className="relative flex items-center justify-center w-full max-w-screen-lg px-4">
+                <button onClick={handlePrev} className="left-0 z-10 p-2 text-2xl text-white hover:bg-red-600/90 bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full">
+                    <FaArrowLeft />
                 </button>
 
-                <div className="flex items-center justify-center w-full">
+                <div className="flex items-center justify-center w-full space-x-4">
                     <div className="w-1/2 p-4">
                         {slides[activeIndex].type === "video" ? (
                             <video
@@ -84,8 +82,8 @@ export function RealisationComponent() {
                     </div>
                 </div>
 
-                <button onClick={handleNext} className="absolute right-0 z-10 p-2 text-2xl text-gray-500 hover:text-gray-700">
-                    <FaArrowRight className="fas fa-angle-right"></FaArrowRight>
+                <button onClick={handleNext} className="right-0 z-10 p-2 text-2xl text-white hover:bg-red-600/90 rounded-full bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)]">
+                    <FaArrowRight />
                 </button>
             </div>
         </div>
