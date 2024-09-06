@@ -11,9 +11,9 @@ export function Home() {
         <HomeLayout>
             <>
                 <BannerComponent/>
+                <RealisationComponent/>
                 {/* <GalleryComponent/>
                 <PackComponent/>
-                <RealisationComponent/>
                 <ContactComponent/> */}
             </>
         </HomeLayout>
