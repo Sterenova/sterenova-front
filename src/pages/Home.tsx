@@ -12,8 +12,8 @@ export function Home() {
             <>
                 <BannerComponent/>
                 <RealisationComponent/>
-                {/* <GalleryComponent/>
-                <PackComponent/>
+                <GalleryComponent/>
+                {/* <PackComponent/>
                 <ContactComponent/> */}
             </>
         </HomeLayout>
