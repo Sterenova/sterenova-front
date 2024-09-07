@@ -1,79 +1,66 @@
 export function GalleryComponent() {
-
-
-    const galleryItems = [
-        {
-            type: "img",
-            src: "img/sterenova/galery/img1",
-            alt: "img1"
-        },
-        {
-            type: "img",
-            src: "img/sterenova/galery/img2",
-            alt: "img2"
-        },
-        {
-            type: "img",
-            src: "img/sterenova/galery/img3",
-            alt: "img3"
-        },
-        {
-            type: "video",
-            src: "img/sterenova/galery/0320.mp4",
-            alt: "video"
-        },
-        {
-            type: "img",
-            src: "img/sterenova/galery/img4",
-            alt: "img4"
-        },
-        {
-            type: "img",
-            src: "img/sterenova/galery/img5",
-            alt: "img5"
-        },
-        {
-            type: "img",
-            src: "img/sterenova/galery/img6",
-            alt: "img6"
-        },
-    ]
-
-    return (    
-    <div id="gallery-sec" className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-y-hidden overflow-x-hidden" >
-
-        <div className="flex items-center relative mb-20">
-            <div className="flex items-center justify-between w-full max-w-screen-lg px-4">
-                <div className="max-w-sm mr-44">
-                    <h4 className="text-red-600/90 font-bold text-5xl">LA GALERIE STERENOVA</h4>
+    return (
+        <div id="gallery-sec" className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-hidden">
+            <div className="flex items-center relative mb-20">
+                <div className="flex items-center justify-between w-full max-w-screen-lg px-4">
+                    <div className="max-w-sm mr-44">
+                        <h4 className="text-red-600/90 font-bold text-5xl">LA GALERIE STERENOVA</h4>
+                    </div>
+                    <p className="max-w-sm ml-44">
+                        Découvrez notre galerie pour vous donner une idée de ce que nous pouvons vous proposer.
+                    </p>
                 </div>
-                <p className="max-w-sm ml-44">
-                    Decouvrez notre galerie pour vous donner une idee de ce que nous pouvons vous proposer.
-                </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:px-40 max-w-screen-xl py-10">
+                <div className="grid gap-20">
+                    <div>
+                        <img className="rotate-90 h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img1" />
+                    </div>
+                    <div>
+                        <img className="h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img21" />
+                    </div>
+                    <div>
+                        <img className="rotate-90 h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img3" />
+                    </div>
+                </div>
+
+                <div className="grid gap-4">
+                    <div>
+                        <img className="h- w-full rounded-lg object-cover" src="img/sterenova/galery/img20" />
+                    </div>
+                    <div>
+                        <img className="rotate-90 h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img2" />
+                    </div>
+                    <div>
+                        <img className="h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img22" />
+                    </div>
+                </div>
+
+                <div className="grid gap-20">
+                    <div>
+                        <img className="rotate-90 h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img16" />
+                    </div>
+                    <div>
+                        <img className="h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img11" />
+                    </div>
+                    <div>
+                        <img className="rotate-90 h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img23" />
+                    </div>
+                </div>
+
+                <div className="grid gap-4">
+                    <div>
+                        <img className="h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img10" />
+                    </div>
+                    <div>
+                        <img className="rotate-90 h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img17" />
+                    </div>
+                    <div>
+                        <img className="h-auto w-full rounded-lg object-cover" src="img/sterenova/galery/img12" />
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div className="flex flex-row justify-center items-center space-x-10">
-            {
-                galleryItems.map((item, index) => {
-                    if (item.type === "img") {
-                        return (
-                            <div key={index} className="max-w-sm">
-                                <img src={item.src} alt={item.alt} />
-                            </div>
-                        )
-                    } else if (item.type === "video") {
-                        return (
-                            <div key={index} className="max-w-sm">
-                                <video autoPlay loop muted>
-                                    <source src={item.src} type="video/mp4" />
-                                </video>
-                            </div>
-                        )
-                    }
-                })
-            }
-        </div>
-    </div>
-    )
+    );
 }
