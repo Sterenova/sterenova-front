@@ -52,7 +52,7 @@ export function RealisationComponent() {
             </div>
 
             <div className="relative flex items-center justify-center w-full max-w-screen-lg px-4">
-                <button onClick={handlePrev} className="mr-4 left-0 z-10 p-2 text-2xl text-white hover:bg-red-600/90 bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full">
+                <button onClick={handlePrev} className="transition-all hover:scale-105 mr-4 left-0 z-10 p-2 text-2xl text-white hover:bg-red-600/90 bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full">
                     <FaArrowLeft />
                 </button>
 
@@ -81,7 +81,7 @@ export function RealisationComponent() {
                     </div>
                 </div>
 
-                <button onClick={handleNext} className="ml-4 right-0 z-10 p-2 text-2xl text-white hover:bg-red-600/90 rounded-full bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)]">
+                <button onClick={handleNext} className="transition-all hover:scale-105 ml-4 right-0 z-10 p-2 text-2xl text-white hover:bg-red-600/90 rounded-full bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)]">
                     <FaArrowRight />
                 </button>
             </div>

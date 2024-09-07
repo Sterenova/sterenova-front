@@ -21,7 +21,7 @@ export function FooterComponent() {
         </div>
 
         {/* Back to Top Button */}
-        <a href="#top" className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full fixed bottom-4 right-4">
+        <a href="#top" className="transition-all hover:scale-105 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full fixed bottom-4 right-4">
           <FaArrowUp className="h-5 w-5" />
         </a>
       </div>

@@ -44,7 +44,7 @@ export function BannerComponent() {
             <br />
             N'hésitez pas à explorer notre site et découvrez notre large gamme de produits.
           </p>
-          <a className="rounded-3xl bg-red-600/90 py-3 px-6 shadow-sm text-white hover:bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)]" href="#contact">
+          <a className="rounded-full bg-red-600/90 py-3 px-6 shadow-sm text-white hover:bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)]" href="#contact">
             Nous contacter
           </a>
         </div>
