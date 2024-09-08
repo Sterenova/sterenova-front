@@ -24,7 +24,7 @@ export function NavBarComponent() {
             <img src="/img/sterenova/logo_25.png" alt="Logo" />
           </a>
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-white hover:text-white hover:ring-4 transition">Accueil</a>
+            <a href="#" className="text-white hover:ring-4 transition">Accueil</a>
             <a href="#portfolio-sec" className="text-white hover:ring-4 transition">Réalisations</a>
             <a href="#gallery-sec" className="text-white hover:ring-4 transition">La Galerie</a>
             <a href="#pricing-sec" className="text-white hover:ring-4 transition">Nos Packs</a>

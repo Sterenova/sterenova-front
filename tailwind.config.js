@@ -6,21 +6,24 @@ export default {
   ],
   theme: {
     extend: {
-      colors : {
-        primary : '#6225B5',
-        secondary : '#8021B5',
+      colors: {
+        primary: '#6225B5',
+        secondary: '#8021B5',
       },
       backgroundImage: {
         'gradient-custom': 'linear-gradient(120deg, rgb(98,37,181) 0%, rgb(128,33,181) 40%)',
       },
       borderRadius: {
-        'custom': '80px',
+        custom: '80px',
       },
       rotate: {
         '-10': '-10deg',
       },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],  // Add Roboto font
+        oswald: ['Oswald', 'sans-serif'],  // Add Oswald font
+      },
     },
   },
   plugins: [],
-}
-
+};
