@@ -21,7 +21,7 @@ export function NavBarComponent() {
       <div className="flex justify-center items-center relative z-20 px-4 py-4 max-h-36 w-full">
         <div className="flex items-center justify-between w-full max-w-screen-xl px-4">
           <a className="flex">
-            <img src="public/img/sterenova/logo_25.png" alt="Logo" />
+            <img src="/img/sterenova/logo_25.png" alt="Logo" />
           </a>
           <nav className="hidden md:flex space-x-8">
             <a href="#" className="text-white hover:text-white hover:ring-4 transition">Accueil</a>

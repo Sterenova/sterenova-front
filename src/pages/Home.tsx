@@ -12,9 +12,9 @@ export function Home() {
             <>
                 <BannerComponent/>
                 <RealisationComponent/>
-                {/* <GalleryComponent/> */}
+                <GalleryComponent/>
                 <PackComponent/>
-                {/* <ContactComponent/> */}
+                <ContactComponent/>
             </>
         </HomeLayout>
     )
