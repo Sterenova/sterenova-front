@@ -9,10 +9,10 @@ interface HomeLayoutProps {
 
 export function HomeLayout({ children }: HomeLayoutProps) {
     return (
-        <>
+        <div className="container">
             <NavBarComponent />
-            {children}
+                {children}
             <FooterComponent />
-        </>
+        </div>
     )
 }
