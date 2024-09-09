@@ -8,8 +8,8 @@ export function GalleryComponent() {
             <Separator/>
             <HeadingSection title="LA GALERIE" titlePrimary="STERENOVA" description="Découvrez notre galerie pour vous donner une idée de ce que nous pouvons vous proposer."/>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:px-40 max-w-screen-xl py-10">
-                <div className="grid gap-20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:px-40 max-w-screen-xl py-10 max-md:mx-4">
+                <div className="grid gap-20 max-md:gap-10">
                     <MyImage
                         src="img/sterenova/galery/img1"
                         alt="Image 1"
@@ -27,7 +27,7 @@ export function GalleryComponent() {
                     />
                 </div>
 
-                <div className="grid gap-4">
+                <div className="grid gap-4 max-md:gap-2">
                     <MyImage
                         src="img/sterenova/galery/img20"
                         alt="Image 20"
@@ -45,7 +45,7 @@ export function GalleryComponent() {
                     />
                 </div>
 
-                <div className="grid gap-20">
+                <div className="grid gap-20 max-md:hidden">
                     <MyImage
                         src="img/sterenova/galery/img16"
                         alt="Image 16"
@@ -63,7 +63,7 @@ export function GalleryComponent() {
                     />
                 </div>
 
-                <div className="grid gap-4">
+                <div className="grid gap-4 max-md:hidden">
                     <MyImage
                         src="img/sterenova/galery/img10"
                         alt="Image 10"
