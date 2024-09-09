@@ -1,3 +1,5 @@
+import { ButtonComponent } from "../Utils/ButtonComponent";
+
 export function PackComponent() {
     const packs = [
         {
@@ -99,10 +101,8 @@ export function PackComponent() {
                     </div>
                 ))}
             </div>
-
-            <a href="/list-product" className="transition-all hover:scale-105 rounded-3xl bg-red-600/90 py-3 px-6 shadow-sm text-white hover:bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)]">
-                Voir tout notre matériel
-            </a>
+            
+            <ButtonComponent className="mt-4" href="/list-product">Voir tout notre matériel</ButtonComponent>
         </div>
     );
 }
