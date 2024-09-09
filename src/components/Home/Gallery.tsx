@@ -6,7 +6,7 @@ export function GalleryComponent() {
             <div className="flex items-center relative mb-20">
                 <div className="flex items-center justify-between w-full max-w-screen-lg px-4">
                     <div className="max-w-sm mr-44">
-                        <h4 className="text-red-600/90 font-bold text-5xl">LA GALERIE STERENOVA</h4>
+                        <h4 className="text-red-600/90 font-bold text-5xl"><span className="text-black">LA GALERIE</span> STERENOVA</h4>
                     </div>
                     <p className="max-w-sm ml-44">
                         Découvrez notre galerie pour vous donner une idée de ce que nous pouvons vous proposer.

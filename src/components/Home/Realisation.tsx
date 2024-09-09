@@ -39,7 +39,7 @@ export function RealisationComponent() {
             <div className="flex items-center relative mb-20">
                 <div className="flex items-center justify-between w-full max-w-screen-lg px-4">
                     <div className="max-w-sm mr-44">
-                        <h4 className="text-red-600/90 font-bold text-5xl">NOS DERNIERS EVENEMENTS & PROJECTS</h4>
+                        <h4 className="text-red-600/90 font-bold text-5xl"><span className="text-black">NOS DERNIERS EVENEMENTS</span> & PROJECTS</h4>
                     </div>
                     <p className="max-w-sm ml-44">
                         Découvrez nos dernières réalisations et projets, et laissez-vous inspirer par nos créations

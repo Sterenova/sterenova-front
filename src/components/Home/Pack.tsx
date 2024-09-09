@@ -71,7 +71,7 @@ export function PackComponent() {
             <div className="flex items-center relative mb-20">
                 <div className="flex items-center justify-between w-full max-w-screen-lg px-4">
                     <div className="max-w-sm mr-44">
-                        <h4 className="text-red-600/90 font-bold text-5xl">NOS PACKS</h4>
+                        <h4 className="text-red-600/90 font-bold text-5xl"><span className="text-black">NOS</span> PACKS</h4>
                     </div>
                     <p className="max-w-sm ml-44">
                         Choisissez parmi nos packs pour trouver celui qui correspond à vos besoins.
