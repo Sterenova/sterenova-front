@@ -7,10 +7,10 @@ export function FooterComponent() {
 
         {/* Social Icons */}
         <div className="flex space-x-12 px-80">
-          <a href="https://www.tiktok.com/@sterenova_" className="text-white hover:text-gray-500">
+          <a href="https://www.tiktok.com/@sterenova_" className="text-white hover:text-gray-500" target="_blank">
             <FaTiktok className="h-6 w-6" />
           </a>
-          <a href="https://www.instagram.com/sterenova_/?hl=fr" className="text-white hover:text-gray-500">
+          <a href="https://www.instagram.com/sterenova_/?hl=fr" className="text-white hover:text-gray-500" target="_blank">
             <FaInstagram className="h-6 w-6" />
           </a>
         </div>

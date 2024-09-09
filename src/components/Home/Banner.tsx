@@ -24,10 +24,10 @@ export function BannerComponent() {
         
         {/* Social Media Links */}
         <div className="flex flex-col space-y-10 py-44 max-sm:hidden mr-24">
-          <a href="https://www.tiktok.com/@sterenova_" className="text-black hover:text-gray-500">
+          <a href="https://www.tiktok.com/@sterenova_" className="text-black hover:text-gray-500" target="_blank">
             <FaTiktok className="h-6 w-6" />
           </a>
-          <a href="https://www.instagram.com/sterenova_/?hl=fr" className="text-black hover:text-gray-500">
+          <a href="https://www.instagram.com/sterenova_/?hl=fr" className="text-black hover:text-gray-500" target="_blank">
             <FaInstagram className="h-6 w-6" />
           </a>
         </div>
