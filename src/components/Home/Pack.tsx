@@ -1,4 +1,6 @@
 import { ButtonComponent } from "../Utils/ButtonComponent";
+import { HeadingSection } from "../Utils/HeadingSection";
+import { Separator } from "../Utils/Separator";
 
 export function PackComponent() {
     const packs = [
@@ -70,20 +72,12 @@ export function PackComponent() {
 
     return (
         <div id="pricing-sec" className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-hidden">
-            <div className="flex items-center relative mb-20">
-                <div className="flex items-center justify-between w-full max-w-screen-lg px-4">
-                    <div className="max-w-sm mr-44">
-                        <h4 className="text-red-600/90 font-bold text-5xl"><span className="text-black">NOS</span> PACKS</h4>
-                    </div>
-                    <p className="max-w-sm ml-44">
-                        Choisissez parmi nos packs pour trouver celui qui correspond à vos besoins.
-                    </p>
-                </div>
-            </div>
+            <Separator />
+            <HeadingSection title="NOS" titlePrimary="PACKS" description="Choisissez parmi nos packs pour trouver celui qui correspond à vos besoins." />
 
-            <div className="grid grid-cols-2 flex-wrap gap-6 justify-center">
+            <div className="grid md:grid-cols-2 grid-cols-1 flex-wrap gap-6 justify-center">
                 {packs.map((pack, index) => (
-                    <div key={index} className="bg-white shadow-lg rounded-xl p-6 transition-all hover:scale-105">
+                    <div key={index} className="bg-white shadow-lg rounded-xl p-6 transition-all hover:scale-105 mx-4">
                         <h3 className="font-bold text-xl text-gray-800">{pack.name}</h3>
                         <div className="space-y-4 mt-4">
                             {pack.subPacks.map((subPack, index) => (
@@ -102,7 +96,7 @@ export function PackComponent() {
                 ))}
             </div>
             
-            <ButtonComponent className="mt-4" href="/list-product">Voir tout notre matériel</ButtonComponent>
+            <ButtonComponent className="mt-4" href="/list-product">Voir tout notre matériel</ButtonComponent>            
         </div>
     );
 }

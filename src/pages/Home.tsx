@@ -9,13 +9,11 @@ import {HomeLayout} from "../components/Layout/Home";
 export function Home() {
     return (
         <HomeLayout>
-            <>
-                <BannerComponent/>
-                <RealisationComponent/>
-                <GalleryComponent/>
-                <PackComponent/>
-                <ContactComponent/>
-            </>
+            <BannerComponent/>
+            <RealisationComponent/>
+            <GalleryComponent/>
+            <PackComponent/>
+            <ContactComponent/>
         </HomeLayout>
     )
 }

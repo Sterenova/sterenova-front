@@ -1,5 +1,7 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
+import { Separator } from "../Utils/Separator";
+import { HeadingSection } from "../Utils/HeadingSection";
 
 export function RealisationComponent() {
 
@@ -32,32 +34,27 @@ export function RealisationComponent() {
             date: "Février 2024",
             description: "Nous avons eu le plaisir de participer à la soirée Tanguy organisée par l’AESF qui s'est tenue au Salon des Miroirs à Paris. Notre équipe a eu le plaisir de mixer lors de cet événement et de mettre en place un éclairage adapté à l'ambiance de la soirée."
         }
-    ]
+    ];
 
     return (
         <div id="portfolio-sec" className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-y-hidden overflow-x-hidden">
-            <div className="flex items-center relative mb-20">
-                <div className="flex items-center justify-between w-full max-w-screen-lg px-4">
-                    <div className="max-w-sm mr-44">
-                        <h4 className="text-red-600/90 font-bold text-5xl"><span className="text-black">NOS DERNIERS EVENEMENTS</span> & PROJECTS</h4>
-                    </div>
-                    <p className="max-w-sm ml-44">
-                        Découvrez nos dernières réalisations et projets, et laissez-vous inspirer par nos créations
-                        uniques et originales.
-                        <br />
-                        Nous mettons tout en oeuvre pour vous offrir une expérience inoubliable, à la hauteur de vos
-                        attentes.
-                    </p>
-                </div>
-            </div>
+            <Separator />
 
+            <HeadingSection
+                title="NOS DERNIERS EVENEMENTS"
+                titlePrimary="& PROJECTS"
+                description="Découvrez nos dernières réalisations et projets, et laissez-vous inspirer par nos créations uniques et originales. Nous mettons tout en oeuvre pour vous offrir une expérience inoubliable, à la hauteur de vos attentes."
+            />
+
+            {/* Responsive Carousel */}
             <div className="relative flex items-center justify-center w-full max-w-screen-lg px-4">
-                <button onClick={handlePrev} className="transition-all hover:scale-105 mr-4 left-0 z-10 p-2 text-2xl text-white hover:bg-red-600/90 bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full">
+                <button onClick={handlePrev} className="transition-all hover:scale-105 mr-4 p-2 text-2xl text-white bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full">
                     <FaArrowLeft />
                 </button>
 
-                <div className="flex items-center justify-center w-full space-x-4">
-                    <div className="w-1/2 p-4">
+                <div className="flex flex-col md:flex-row items-center justify-center w-full space-y-4 md:space-y-0 md:space-x-4">
+                    {/* Image or Video */}
+                    <div className="w-full md:w-1/2 p-4">
                         {slides[activeIndex].type === "video" ? (
                             <video
                                 src={slides[activeIndex].image}
@@ -75,16 +72,17 @@ export function RealisationComponent() {
                         )}
                     </div>
 
-                    <div className="w-1/2 p-4">
+                    {/* Description */}
+                    <div className="w-full md:w-1/2 p-4">
                         <h4 className="text-2xl font-bold text-red-600">{slides[activeIndex].date}</h4>
                         <p className="mt-2 text-gray-600">{slides[activeIndex].description}</p>
                     </div>
                 </div>
 
-                <button onClick={handleNext} className="transition-all hover:scale-105 ml-4 right-0 z-10 p-2 text-2xl text-white hover:bg-red-600/90 rounded-full bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)]">
+                <button onClick={handleNext} className="transition-all hover:scale-105 ml-4 p-2 text-2xl text-white bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full">
                     <FaArrowRight />
                 </button>
             </div>
         </div>
-    )
+    );
 }

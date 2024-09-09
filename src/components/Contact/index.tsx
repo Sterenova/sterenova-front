@@ -1,87 +1,78 @@
 import { FaMapMarkerAlt, FaPaperPlane, FaPhoneAlt } from "react-icons/fa";
 import { ButtonComponent } from "../Utils/ButtonComponent";
+import { HeadingSection } from "../Utils/HeadingSection";
+import { Separator } from "../Utils/Separator";
 
 export function ContactComponent() {
-  return (
-    <section className="py-16 bg-white" id="contact-sec">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form Section */}
-          <div className="">
-            <h4 className="text-3xl font-bold mb-6 text-center lg:text-left">
-              PRENDRE CONTACT
-            </h4>
-            <form className="" id="contact-form-data">
-                <div className="flex gap-4">
-                  <div className="">
+return (
+    <div className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-hidden" id="contact-sec">
+      <Separator />
+      <HeadingSection title="NOUS" titlePrimary="CONTACTER" description="Vous pouvez nous contacter par mail ou par téléphone pour toute demande de renseignements ou pour réserver notre matériel ou votre événement." />
 
-                  <input
-                    type="text"
-                    placeholder="Nom"
-                    required
-                    name="userName"
-                    className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Adresse Mail *"
-                    required
-                    name="userEmail"
-                    className="w-full p-4 mt-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Sujet"
-                    required
-                    name="userSubject"
-                    className="w-full p-4 mt-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                  />
-                  </div>
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-6 justify-center max-w-screen-lg">
+        {/* Form Section */}
+        <form className="w-full" id="contact-form-data">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex flex-col space-y-4">
+              <input
+                type="text"
+                placeholder="Nom"
+                required
+                name="userName"
+                className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              />
+              <input
+                type="email"
+                placeholder="Adresse Mail *"
+                required
+                name="userEmail"
+                className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              />
+              <input
+                type="text"
+                placeholder="Sujet"
+                required
+                name="userSubject"
+                className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              />
+            </div>
 
-                  <textarea
-                    className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                    placeholder="Votre Message"
-                    name="userMessage"
-                    rows={6}
-                  ></textarea>
-                </div>
-              <div className="col-span-1 md:col-span-2 py-4">
-                <ButtonComponent className="mt-4 w-full" type="submit">Envoyer Message</ButtonComponent>
+            <textarea
+              className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              placeholder="Votre Message"
+              name="userMessage"
+              rows={6}
+            ></textarea>
+          </div>
+
+          <div className="mt-4">
+            <ButtonComponent className="w-full" type="submit">Envoyer Message</ButtonComponent>
+          </div>
+        </form>
+
+        {/* Contact Information Section */}
+        <div className="flex justify-center md:justify-start">
+          <ul className="space-y-4 text-center md:text-left md:ml-12">
+            <li className="flex items-center md:justify-start">
+              <FaMapMarkerAlt className="text-2xl text-purple-600" />
+              <span className="ml-4 text-lg">Paris</span>
+            </li>
+            <li className="flex items-center md:justify-start">
+              <FaPhoneAlt className="text-2xl text-purple-600" />
+              <div className="ml-4 space-y-1">
+                <p>07 68 36 46 48</p>
+                <p>07 81 98 99 63</p>
+                <p>06 66 99 53 32</p>
               </div>
-            </form>
-          </div>
-
-          {/* Contact Info Section */}
-          <div className="">
-            <h4 className="text-3xl font-bold mb-6 text-center lg:text-left">
-              NOUS RETROUVER
-            </h4>
-            <p className="text-gray-600 mb-4 text-center lg:text-left">
-              Vous pouvez nous contacter par mail ou par téléphone pour toute
-              demande de renseignements ou pour réserver notre matériel ou
-              votre événement.
-            </p>
-            <ul className="space-y-4 text-center lg:text-left">
-              <li className="flex items-center justify-center lg:justify-start">
-                <FaMapMarkerAlt className="text-2xl text-purple-600" />
-                <span className="ml-4 text-lg">Paris</span>
-              </li>
-              <li className="flex items-center justify-center lg:justify-start">
-                <FaPhoneAlt className="text-2xl text-purple-600" />
-                <div className="ml-4 space-y-1">
-                  <p>07 68 36 46 48</p>
-                  <p>07 81 98 99 63</p>
-                  <p>06 66 99 53 32</p>
-                </div>
-              </li>
-              <li className="flex items-center justify-center lg:justify-start">
-                <FaPaperPlane className="text-2xl text-purple-600" />
-                <span className="ml-4 text-lg">contact.sterenova@gmail.fr</span>
-              </li>
-            </ul>
-          </div>
+            </li>
+            <li className="flex items-center lg:justify-start">
+              <FaPaperPlane className="text-2xl text-purple-600" />
+              <span className="ml-4 text-lg">contact.sterenova@gmail.fr</span>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+
+    </div>
   );
 }
