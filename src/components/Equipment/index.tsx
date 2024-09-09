@@ -1,5 +1,7 @@
 import { EquipmentType } from "../../types/EquipmentType";
 import { PhotoType } from "../../types/PhotoType";
+import { Background } from "../Utils/Background";
+import { HeadingSection } from "../Utils/HeadingSection";
 
 interface EquipmentComponentProps {
     equipments: EquipmentType[];
@@ -14,10 +16,15 @@ export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
     }
 
     return (
-        <div className="container-fluid">
-            <div className="row">
+        <div>
+            <div className="flex flex-col md:flex-row justify-center py-20 md:py-32 overflow-hidden">
+                <Background />
+                <HeadingSection title="Nos " titlePrimary="Equipements" description="Découvrez notre large gamme de produits" />
+            </div>
+            <div className="relative flex flex-row justify-center items-center mb-20">
+                <div className="flex flex-col md:flex-row items-center md:items-start space-x-2">
                 {equipments.map((item: EquipmentType) => (
-                    <div key={item.id} className="col-12 col-md-6 col-lg-3 pricing-card">
+                    <div key={item.id} className="bg-slate-500 rounded-md min-w-60 min-h-60">
                         <div className="pricing-box wow fadeInUp">
                             <div className="pricing-box-detail position-relative">
                                 <div className="pricing-detail-overlay"></div>
@@ -39,6 +46,7 @@ export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
                         </div>
                     </div>
                 ))}
+            </div>
             </div>
         </div>
     );

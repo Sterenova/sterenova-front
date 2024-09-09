@@ -96,7 +96,7 @@ export function PackComponent() {
                 ))}
             </div>
             
-            <ButtonComponent className="mt-4" href="/list-product">Voir tout notre matériel</ButtonComponent>            
+            <ButtonComponent className="mt-4" href="/equipment">Voir tout notre matériel</ButtonComponent>            
         </div>
     );
 }
