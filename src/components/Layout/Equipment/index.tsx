@@ -1,13 +1,11 @@
-
-import React from "react";
-import { NavBarComponent } from "../NavBar";
 import { FooterComponent } from "../Footer";
+import { NavBarComponent } from "../NavBar";
 
-interface HomeLayoutProps {
+interface EquipmentLayoutProps {
     children: React.ReactNode;
 }
 
-export function HomeLayout({ children }: HomeLayoutProps) {
+export function EquipmentLayout({ children }: EquipmentLayoutProps) {
     return (
         <>
             <NavBarComponent />

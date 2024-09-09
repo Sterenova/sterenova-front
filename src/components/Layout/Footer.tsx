@@ -1,34 +1,29 @@
+import { FaTiktok, FaInstagram, FaArrowUp } from 'react-icons/fa';
+
 export function FooterComponent() {
   return (
-    <footer className="footer-style-1">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-6">
-            <div className="footer-social text-center text-lg-left ">
-              <ul className="list-unstyled">
-                <li>
-                  <a
-                    className="wow fadeInUp"
-                    href="https://www.tiktok.com/@sterenova_"
-                  >
-                    <i aria-hidden="true" className="fab fa-tiktok"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="wow fadeInUp"
-                    href="https://www.instagram.com/sterenova_/?hl=fr"
-                  >
-                    <i aria-hidden="true" className="fab fa-instagram"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-6 text-center text-lg-right">
-            <p className="company-about fadeIn">© 2024 Sterenova</p>
-          </div>
+    <footer className="bg-gray-900 text-white py-6 relative pb-6 overflow-x-hidden">
+      <div className="container mx-auto flex justify-between items-center">
+
+        {/* Social Icons */}
+        <div className="flex space-x-12 px-80">
+          <a href="https://www.tiktok.com/@sterenova_" className="text-white hover:text-gray-500" target="_blank">
+            <FaTiktok className="h-6 w-6" />
+          </a>
+          <a href="https://www.instagram.com/sterenova_/?hl=fr" className="text-white hover:text-gray-500" target="_blank">
+            <FaInstagram className="h-6 w-6" />
+          </a>
         </div>
+
+        {/* Copyright */}
+        <div className="text-white text-sm px-80">
+          &copy; 2024 Sterenova
+        </div>
+
+        {/* Back to Top Button */}
+        <a href="#top" className="transition-all hover:scale-105 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full fixed bottom-4 right-4">
+          <FaArrowUp className="h-5 w-5" />
+        </a>
       </div>
     </footer>
   );

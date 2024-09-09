@@ -1,49 +1,88 @@
+import { HeadingSection } from "../Utils/HeadingSection";
+import MyImage from "../Utils/MyImage";
+import { Separator } from "../Utils/Separator";
+
 export function GalleryComponent() {
-    return (    
-    <section className="padding-top padding-bottom gallery-section" id="gallery-sec">
-        <div className="container">
-            <div className="row portfolio-heading-area text-center text-lg-left">
-                <div className="col-12 col-lg-6">
-                    <h4 className="heading wow fadeInLeft">LA <span className="color">GALERIE</span></h4>
-                </div>
-                <div className="col-12 col-lg-5 offset-lg-1">
-                    <p className="text wow fadeInRight">
-                        Decouvrez notre galerie pour vous donner une idee de ce que nous pouvons vous proposer.
-                    </p>
-                </div>
-            </div>
-            <div className="gallery-container">
-                <div className="gallery-sub-container">
-                    <div className="gallery-item">
-                        <img src="img/sterenova/galery/img1" alt="img1"/>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="img/sterenova/galery/img2" alt="img2"/>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="img/sterenova/galery/img3" alt="img3"/>
-                    </div>
+    return (
+        <div id="gallery-sec" className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-hidden">
+            <Separator/>
+            <HeadingSection title="LA GALERIE" titlePrimary="STERENOVA" description="Découvrez notre galerie pour vous donner une idée de ce que nous pouvons vous proposer."/>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:px-40 max-w-screen-xl py-10">
+                <div className="grid gap-20">
+                    <MyImage
+                        src="img/sterenova/galery/img1"
+                        alt="Image 1"
+                        className="rotate-90 h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                    <MyImage
+                        src="img/sterenova/galery/img21"
+                        alt="Image 21"
+                        className="h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                    <MyImage
+                        src="img/sterenova/galery/img3"
+                        alt="Image 3"
+                        className="rotate-90 h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
                 </div>
 
-                <div className="gallery-item video-item">
-                    <video loop autoPlay muted>
-                        <source src="img/sterenova/galery/0320.mp4" type="video/mp4"/>
-                    </video>
+                <div className="grid gap-4">
+                    <MyImage
+                        src="img/sterenova/galery/img20"
+                        alt="Image 20"
+                        className="h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                    <MyImage
+                        src="img/sterenova/galery/img2"
+                        alt="Image 2"
+                        className="rotate-90 h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                    <MyImage
+                        src="img/sterenova/galery/img22"
+                        alt="Image 22"
+                        className="h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
                 </div>
 
-                <div className="gallery-sub-container">
-                    <div className="gallery-item">
-                        <img src="img/sterenova/galery/img4" alt="img4"/>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="img/sterenova/galery/img5" alt="img5"/>
-                    </div>
-                    <div className="gallery-item">
-                        <img src="img/sterenova/galery/img6" alt="img6"/>
-                    </div>
+                <div className="grid gap-20">
+                    <MyImage
+                        src="img/sterenova/galery/img16"
+                        alt="Image 16"
+                        className="rotate-90 h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                    <MyImage
+                        src="img/sterenova/galery/img11"
+                        alt="Image 11"
+                        className="h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                    <MyImage
+                        src="img/sterenova/galery/img23"
+                        alt="Image 23"
+                        className="rotate-90 h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                </div>
+
+                <div className="grid gap-4">
+                    <MyImage
+                        src="img/sterenova/galery/img10"
+                        alt="Image 10"
+                        className="h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                    <MyImage
+                        src="img/sterenova/galery/img17"
+                        alt="Image 17"
+                        className="rotate-90 h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
+                    <MyImage
+                        src="img/sterenova/galery/img12"
+                        alt="Image 12"
+                        className="h-auto w-full rounded-lg object-cover hover:scale-105 transition"
+                    />
                 </div>
             </div>
         </div>
-    </section>
-    )
+    );
 }
+
+export default GalleryComponent;
