@@ -2,7 +2,7 @@ import { FaInstagram, FaTiktok } from "react-icons/fa";
 
 export function BannerComponent() {
   return (
-    <div id="banner-slider" className="relative flex flex-row justify-center py-32 overflow-x-hidden overflow-y-hidden">
+    <div id="banner-slider" className="flex flex-row justify-center py-32 overflow-x-hidden overflow-y-hidden">
         {/* Background SVG */}
         <div className="absolute justify-center ml-96 mt-52 z-0 max-sm:hidden" style={{ height: '150px' }}>
           <div className="relative w-full h-full">
