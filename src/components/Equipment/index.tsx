@@ -11,7 +11,6 @@ export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
     return (
         <div>
             <div className="flex flex-col md:flex-row justify-center py-20 md:py-32 overflow-hidden">
-                <Background />
                 <HeadingSection title="Nos " titlePrimary="Equipements" description="Découvrez notre large gamme de produits" />
             </div>
             <div className="relative flex flex-row justify-center items-center mb-20">
