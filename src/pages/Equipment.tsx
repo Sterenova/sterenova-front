@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { EquipmentType } from "../types/EquipmentType";
 import apiSterenova from "../tools/apiSterenova";
-import { HomeLayout } from "../components/Layout/Home";
 import { EquipmentComponent } from "../components/Equipment";
+import { EquipmentLayout } from "../components/Layout/Equipment";
+import { ErrorComponent } from "../components/Error/ErrorComponent";
 
 export function Equipment() {
     const [equipments, setEquipments] = useState<EquipmentType[]>([]);
@@ -17,9 +18,14 @@ export function Equipment() {
             });
     }, []);
 
+
+    if (!equipments || equipments.length === 0) {
+        return <ErrorComponent errorText="Aucun équipement trouvé" />;
+    }
+
     return (
-        <HomeLayout>
+        <EquipmentLayout>
             <EquipmentComponent equipments={equipments} />
-        </HomeLayout>
+        </EquipmentLayout>
     );
 }

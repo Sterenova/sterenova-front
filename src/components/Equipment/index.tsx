@@ -8,13 +8,6 @@ interface EquipmentComponentProps {
 }
 
 export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
-    console.log(equipments);
-
-    // Render nothing if equipments is undefined or empty
-    if (!equipments || equipments.length === 0) {
-        return <div>No equipment available.</div>;
-    }
-
     return (
         <div>
             <div className="flex flex-col md:flex-row justify-center py-20 md:py-32 overflow-hidden">

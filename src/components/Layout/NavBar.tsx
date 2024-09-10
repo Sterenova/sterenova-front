@@ -1,7 +1,22 @@
 import { useState, useEffect } from "react";
+import { Link } from "../../types/LinkInterface";
 
-export function NavBarComponent() {
-  const [scrolled, setScrolled] = useState(false);
+
+interface NavBarProps {
+  links?: Link[];
+  isAlreadyScrolled?: boolean;
+}
+
+const defaultLinks: Link[] = [
+  { title: "Accueil", href: "/" },
+  { title: "Réalisations", href: "#portfolio-sec" },
+  { title: "La Galerie", href: "#gallery-sec" },
+  { title: "Nos Packs", href: "#pricing-sec" },
+  { title: "Nous Contacter", href: "#contact-sec" },
+];
+
+export function NavBarComponent({ links = defaultLinks, isAlreadyScrolled = false }: NavBarProps) {
+  const [scrolled, setScrolled] = useState(isAlreadyScrolled);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,11 +38,15 @@ export function NavBarComponent() {
             <img src="/img/sterenova/logo_25.png" alt="Logo" />
           </a>
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-white hover:ring-4 transition">Accueil</a>
-            <a href="#portfolio-sec" className="text-white hover:ring-4 transition">Réalisations</a>
-            <a href="#gallery-sec" className="text-white hover:ring-4 transition">La Galerie</a>
-            <a href="#pricing-sec" className="text-white hover:ring-4 transition">Nos Packs</a>
-            <a href="#contact-sec" className="text-white hover:ring-4 transition">Nous Contacter</a>
+            {links.map((link) => (
+                <a 
+                key={link.title} 
+                href={link.href} 
+                className="relative text-white font-semibold transition-all duration-300 hover:after:content-['v'] hover:after:absolute hover:after:-top-4 hover:after:left-1/2 hover:after:transform hover:after:-translate-x-1/2"
+                >
+                {link.title}
+                </a>
+            ))}
           </nav>
         </div>
       </div>
