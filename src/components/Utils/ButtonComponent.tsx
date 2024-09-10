@@ -14,7 +14,7 @@ export function ButtonComponent(props: ButtonProps) {
         return (
             <a
                 href={href}
-                className={`${className} bg-red-600/90 py-3 px-6 shadow-sm text-white hover:bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full transition-all duration-300 hover:scale-105`}
+                className={`${className} hover:bg-red-600/90 py-3 px-6 shadow-sm text-white bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full transition-all duration-300 hover:scale-105`}
             >
                 {children}
             </a>
@@ -24,7 +24,7 @@ export function ButtonComponent(props: ButtonProps) {
     return (
         <button
             type={type || 'button'}
-            className={`${className} bg-red-600/90 py-3 px-6 shadow-sm text-white hover:bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full transition-all duration-300 hover:scale-105`}
+            className={`${className} hover:bg-red-600/90 py-3 px-6 shadow-sm text-white bg-gradient-to-r from-[rgba(98,37,181,0.8)] to-[rgba(128,33,181,0.8)] rounded-full transition-all duration-300 hover:scale-105`}
         >
             {children}
         </button>
