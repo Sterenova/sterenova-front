@@ -42,7 +42,7 @@ export function NavBarComponent({ links = defaultLinks, isAlreadyScrolled = fals
                 <a 
                 key={link.title} 
                 href={link.href} 
-                className="relative text-white font-semibold transition-all duration-300 hover:after:content-['v'] hover:after:absolute hover:after:-top-4 hover:after:left-1/2 hover:after:transform hover:after:-translate-x-1/2"
+                className="relative text-white font-semibold transition-all duration-300 hover:after:content-['v'] hover:after:absolute hover:after:-top-4 hover:after:left-1/2 hover:after:transform hover:after:-translate-x-1/2 "
                 >
                 {link.title}
                 </a>
