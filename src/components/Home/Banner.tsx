@@ -4,14 +4,14 @@ import { Background } from "../Utils/Background";
 
 export function BannerComponent() {
   return (
-    <div id="banner-slider" className="relative flex flex-col md:flex-row justify-center py-20 md:py-32 overflow-x-hidden overflow-y-hidden">
+    <div id="banner-slider" className="relative flex flex-col md:flex-row justify-center py-20 md:py-48 overflow-x-hidden overflow-y-hidden">
       <Background />
 
       {/* Main Content */}
       <div className="flex flex-col md:flex-row z-10 items-center md:items-start">
 
         {/* Social Media Links - Masqué sur mobile */}
-        <div className="flex flex-col space-y-10 py-10 md:py-44 md:flex mr-0 md:mr-24">
+        <div className="flex-col space-y-10 py-10 md:py-56 md:flex mr-0 md:mr-24 hidden">
           <a href="https://www.tiktok.com/@sterenova_" className="text-black hover:text-gray-500" target="_blank" rel="noreferrer">
             <FaTiktok className="h-6 w-6" />
           </a>
