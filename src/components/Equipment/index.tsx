@@ -1,6 +1,5 @@
 import { EquipmentType } from "../../types/EquipmentType";
 import { PhotoType } from "../../types/PhotoType";
-import { Background } from "../Utils/Background";
 import { HeadingSection } from "../Utils/HeadingSection";
 
 interface EquipmentComponentProps {
