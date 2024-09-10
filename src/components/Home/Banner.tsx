@@ -32,7 +32,7 @@ export function BannerComponent() {
             <br />
             N'hésitez pas à explorer notre site et découvrez notre large gamme de produits.
           </p>
-          <ButtonComponent className="mt-4 w-full md:w-auto" href="#contact">Nous contacter</ButtonComponent>
+          <ButtonComponent className="mt-4 w-full md:w-auto" href="#contact-sec">Nous contacter</ButtonComponent>
         </div>
 
         {/* Image */}
