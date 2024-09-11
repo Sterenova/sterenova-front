@@ -8,7 +8,7 @@ interface EquipmentLayoutProps {
 export function EquipmentLayout({ children }: EquipmentLayoutProps) {
     return (
         <>
-            <NavBarComponent isAlreadyScrolled={true} />
+            <NavBarComponent scrolledValue={0} isAlreadyScrolled={true} />
                 {children}
             <FooterComponent />
         </>

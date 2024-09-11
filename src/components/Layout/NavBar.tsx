@@ -5,6 +5,7 @@ import { Link } from "../../types/LinkInterface";
 interface NavBarProps {
   links?: Link[];
   isAlreadyScrolled?: boolean;
+  scrolledValue?: number;
 }
 
 const defaultLinks: Link[] = [
@@ -15,12 +16,12 @@ const defaultLinks: Link[] = [
   { title: "Nous Contacter", href: "#contact-sec" },
 ];
 
-export function NavBarComponent({ links = defaultLinks, isAlreadyScrolled = false }: NavBarProps) {
+export function NavBarComponent({ links = defaultLinks, isAlreadyScrolled = false, scrolledValue = 190 }: NavBarProps) {
   const [scrolled, setScrolled] = useState(isAlreadyScrolled);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 190);
+      setScrolled(window.scrollY >= scrolledValue);
     };
 
     window.addEventListener("scroll", handleScroll);
