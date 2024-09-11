@@ -1,5 +1,5 @@
 import { EquipmentType } from "../../types/EquipmentType";
-import { PhotoType } from "../../types/PhotoType";
+import { ButtonComponent } from "../Utils/ButtonComponent";
 import { HeadingSection } from "../Utils/HeadingSection";
 
 interface EquipmentComponentProps {
@@ -8,38 +8,48 @@ interface EquipmentComponentProps {
 
 export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
     return (
+        <div className="flex flex-col items-center justify-center space-y-10 mb-40 overflow-hidden px-4 md:px-8 lg:px-16">
+            {/* Heading Section */}
+            <HeadingSection
+                title="Nos "
+                titlePrimary="Équipements"
+                description="Découvrez notre large gamme de produits"
+                className="md:pt-48"
+            />
 
-        <div className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-hidden">
-            <HeadingSection title="Nos " titlePrimary="Equipements" description="Découvrez notre large gamme de produits" className="md:pt-48"/>
-
-            <div className="relative flex flex-row justify-center items-center mb-20">
-                <div className="flex flex-col md:flex-row items-center md:items-start space-x-2">
-                    {equipments.map((item: EquipmentType) => (
-                        <div key={item.id} className="bg-slate-500 rounded-md min-w-60 min-h-60">
-                            <div className="pricing-box wow fadeInUp">
-                                <div className="pricing-box-detail position-relative">
-                                    <div className="pricing-detail-overlay"></div>
-                                    <h5 className="pricing-title text-center">{item.name}</h5>
-                                    <div className="col-12">
-                                        <div className="portfolio-carousel owl-carousel owl-item">
-                                            {item.photos.map((img: PhotoType) => (
-                                                <img key={img.id} src={img.url} alt={img.id.toString()} />
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="pricing-box-header position-relative">
-                                    <div className="pricing-header-overlay"></div>
-                                    <div className="header-content">
-                                        <a href={`product-detail.html?id=${encodeURIComponent(item.id)}`} className="btn pink-btn rounded-pill w-100">Voir Details</a>
-                                    </div>
-                                </div>
-                            </div>
+            {/* Equipment Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
+                {equipments.map((item: EquipmentType) => (
+                    <div key={item.id} className="flex flex-col bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-sm h-96">
+                        {/* Equipment Title */}
+                        <div className="p-4 text-center">
+                            <h5 className="text-lg font-semibold">{item.name}</h5>
                         </div>
-                    ))}
-                </div>
+
+                        {/* Image Container */}
+                        <div className="flex-1 overflow-hidden relative bg-slate-100 pb-10">
+                            {item.photos.length > 0 ? (
+                                <img
+                                    className="w-full h-full object-contain"
+                                    src={item.photos[0].url}
+                                    alt={item.name}
+                                />
+                            ) : (
+                                <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                                    <span className="text-gray-500">No Image Available</span>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Button Section */}
+                        <div className="p-4">
+                            <ButtonComponent className="w-full flex justify-center" href="feur">
+                                Voir Details
+                            </ButtonComponent>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
-
     );
 }
