@@ -9,7 +9,6 @@ interface EquipmentComponentProps {
 export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
     return (
         <div className="flex flex-col items-center justify-center space-y-10 mb-40 overflow-hidden px-4 md:px-8 lg:px-16">
-            {/* Heading Section */}
             <HeadingSection
                 title="Nos "
                 titlePrimary="Équipements"
@@ -17,7 +16,6 @@ export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
                 className="md:pt-48"
             />
 
-            {/* Equipment Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
                 {equipments.map((item: EquipmentType) => (
                     <div key={item.id} className="flex flex-col bg-white shadow-lg rounded-xl overflow-hidden w-full max-w-sm h-96">
@@ -26,7 +24,6 @@ export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
                             <h5 className="text-lg font-semibold">{item.name}</h5>
                         </div>
 
-                        {/* Image Container */}
                         <div className="flex-1 overflow-hidden relative bg-slate-100 pb-10">
                             {item.photos.length > 0 ? (
                                 <img
@@ -41,9 +38,8 @@ export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
                             )}
                         </div>
 
-                        {/* Button Section */}
                         <div className="p-4">
-                            <ButtonComponent className="w-full flex justify-center" href="feur">
+                            <ButtonComponent className="w-full flex justify-center" href={`product-detail?id=${encodeURIComponent(item.id)}`}>
                                 Voir Details
                             </ButtonComponent>
                         </div>
