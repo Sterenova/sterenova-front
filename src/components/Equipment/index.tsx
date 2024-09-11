@@ -77,7 +77,7 @@ export function EquipmentComponent({ equipments }: EquipmentComponentProps) {
                         </div>
 
                         <div className="p-4">
-                            <ButtonComponent className="w-full flex justify-center" href={`product-detail?id=${encodeURIComponent(item.id)}`}>
+                            <ButtonComponent className="w-full flex justify-center" href={`equipment/${encodeURIComponent(item.id)}`}>
                                 Voir Détails
                             </ButtonComponent>
                         </div>
