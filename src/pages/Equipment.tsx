@@ -4,7 +4,6 @@ import apiSterenova from "../tools/apiSterenova";
 import { EquipmentComponent } from "../components/Equipment";
 import { EquipmentLayout } from "../components/Layout/Equipment";
 import { ErrorComponent } from "../components/Error/ErrorComponent";
-import { toast } from "react-toastify";
 
 export function Equipment() {
     const [equipments, setEquipments] = useState<EquipmentType[]>([]);
