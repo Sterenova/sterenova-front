@@ -1,7 +1,7 @@
 
 import React from "react";
-import { NavBarComponent } from "../NavBar";
-import { FooterComponent } from "../Footer";
+import { NavBarComponent } from "../../Utils/NavBar";
+import { FooterComponent } from "../../Utils/Footer";
 
 interface HomeLayoutProps {
     children: React.ReactNode;

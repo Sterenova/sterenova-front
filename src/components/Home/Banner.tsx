@@ -4,7 +4,7 @@ import { Background } from "../Utils/Background";
 
 export function BannerComponent() {
   return (
-    <div id="banner-slider" className="relative flex flex-col md:flex-row justify-center py-20 md:py-48 overflow-x-hidden overflow-y-hidden">
+    <div id="banner-slider" className="relative flex flex-col md:flex-row justify-center py-20 md:py-28 overflow-x-hidden overflow-y-hidden">
       <Background />
 
       {/* Main Content */}

@@ -1,5 +1,5 @@
-import { FooterComponent } from "../Footer";
-import { NavBarComponent } from "../NavBar";
+import { FooterComponent } from "../../Utils/Footer";
+import { NavBarComponent } from "../../Utils/NavBar";
 
 interface EquipmentLayoutProps {
     children: React.ReactNode;
