@@ -21,7 +21,6 @@ export function Product() {
             });
     }, []);
 
-    console.log(equipment);
 
     if (!equipment) {
         return <ErrorComponent errorText="Aucun équipement trouvé" />;
