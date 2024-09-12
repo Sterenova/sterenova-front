@@ -1,9 +1,42 @@
+"use server";
 import { FaMapMarkerAlt, FaPaperPlane, FaPhoneAlt } from "react-icons/fa";
 import { ButtonComponent } from "../Utils/ButtonComponent";
 import { HeadingSection } from "../Utils/HeadingSection";
 import { Separator } from "../Utils/Separator";
+import apiSterenova from "../../tools/apiSterenova";
+import { toast } from "react-toastify";
 
 export function ContactComponent() {
+
+  function sendContactForm(formData: any) {
+    formData.preventDefault();
+
+    const form = formData.target;
+    const data = new FormData(form);
+
+    const userName = data.get('userName');
+    const userEmail = data.get('userEmail');
+    const userSubject = data.get('userSubject');
+    const userMessage = data.get('userMessage');
+
+    apiSterenova.post('/contact', {
+      name: userName,
+      email: userEmail,
+      subject: userSubject,
+      message: userMessage
+    })
+      .then(response => {
+        console.log(response);
+        toast.success("Message envoyé avec succès");
+        form.reset();
+      })
+      .catch(error => {
+        console.error(error);
+        toast.error("Erreur lors de l'envoi du message");
+      });
+    
+  }
+
 return (
     <div className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-hidden" id="contact-sec">
       <Separator />
@@ -11,7 +44,7 @@ return (
 
       <div className="grid md:grid-cols-2 grid-cols-1 gap-6 justify-center max-w-screen-lg">
         {/* Form Section */}
-        <form className="w-full" id="contact-form-data">
+        <form className="w-full" id="contact-form-data" onSubmit={sendContactForm}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col space-y-4">
               <input
@@ -38,7 +71,7 @@ return (
             </div>
 
             <textarea
-              className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
               placeholder="Votre Message"
               name="userMessage"
               rows={6}

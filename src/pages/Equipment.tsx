@@ -4,6 +4,7 @@ import apiSterenova from "../tools/apiSterenova";
 import { EquipmentComponent } from "../components/Equipment";
 import { EquipmentLayout } from "../components/Layout/Equipment";
 import { ErrorComponent } from "../components/Error/ErrorComponent";
+import { toast } from "react-toastify";
 
 export function Equipment() {
     const [equipments, setEquipments] = useState<EquipmentType[]>([]);
@@ -17,7 +18,6 @@ export function Equipment() {
                 console.error(error);
             });
     }, []);
-
 
     if (!equipments || equipments.length === 0) {
         return <ErrorComponent errorText="Aucun équipement trouvé" />;

@@ -4,10 +4,13 @@ import './style.css';
 import { Equipment } from "./pages/Equipment.tsx";
 import { ErrorPage } from "./pages/ErrorPage.tsx";
 import { Product } from "./pages/Product.tsx";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <Router>
+      <ToastContainer />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
