@@ -71,40 +71,33 @@ export function PackComponent() {
     ];
 
     return (
-        <section>
-            {/* Container */}
-            <div id="pricing-sec" className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20 flex flex-col justify-center items-center space-y-10 mb-40 overflow-hidden">
-                <Separator />
-                <HeadingSection title="NOS" titlePrimary="PACKS" description="Choisissez parmi nos packs pour trouver celui qui correspond à vos besoins." />
+        <div id="pricing-sec" className="flex flex-col justify-center items-center space-y-10 mb-40 overflow-hidden">
+            <Separator />
+            <HeadingSection title="NOS" titlePrimary="PACKS" description="Choisissez parmi nos packs pour trouver celui qui correspond à vos besoins." />
 
-                {/* Pack Cards */}
-                <div className="grid md:grid-cols-2 grid-cols-1 gap-6 max-w-6xl w-full">
-                    {packs.map((pack, index) => (
-                        <div key={index} className="bg-gray-100 p-6 rounded-lg transition-all hover:scale-105 mx-4 flex flex-col justify-between h-full shadow-lg">
-                            <h3 className="font-bold text-xl text-gray-800 mb-4">{pack.name}</h3>
-
-                            <div className="space-y-4 flex-grow">
-                                {pack.subPacks.map((subPack, idx) => (
-                                    <div key={idx} className="p-4 rounded-lg bg-white shadow-sm flex flex-col justify-between min-h-[150px]">
-                                        <h4 className="font-semibold text-lg text-gray-700">{subPack.name}</h4>
-                                        {/* Removing dangerouslySetInnerHTML */}
-                                        <p className="text-gray-600 text-sm">{subPack.description.split("<br/>").map((line, i) => (
-                                            <span key={i} className="block">{line}</span>
-                                        ))}</p>
-                                        <p className="text-lg font-medium text-gray-800 mt-2">€{subPack.price}</p>
-                                    </div>
-                                ))}
-                            </div>
-                            
-                            <div className="mt-4">
-                                <h6 className="font-semibold text-md text-gray-700">Combo (Son + Lumières) €{pack.combinedPrice}</h6>
-                            </div>
+            <div className="grid md:grid-cols-2 grid-cols-1 flex-wrap gap-6 justify-center">
+                {packs.map((pack, index) => (
+                    <div key={index} className="bg-white shadow-lg rounded-xl p-6 transition-all hover:scale-105 mx-4 flex flex-col justify-between h-full">
+                        <h3 className="font-bold text-xl text-gray-800">{pack.name}</h3>
+                        <div className="space-y-4 mt-4 flex-grow">
+                            {pack.subPacks.map((subPack, index) => (
+                                <div key={index} className="p-4 rounded-lg bg-gray-100 shadow-sm flex flex-col justify-between min-h-[150px]">
+                                    <h4 className="font-semibold text-lg text-gray-700">{subPack.name}</h4>
+                                    <p className="text-gray-600 text-sm" dangerouslySetInnerHTML={{ __html: subPack.description }} />
+                                    <p className="text-lg font-medium text-gray-800 mt-2">€{subPack.price}</p>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
-
-                <ButtonComponent className="mt-4" href="/equipment">Voir tout notre matériel</ButtonComponent>
+                        <div className="mt-4">
+                            <h6 className="font-semibold text-md text-gray-700">Combo (Son + Lumières) €{pack.combinedPrice}</h6>
+                        </div>
+                    </div>
+                ))}
             </div>
-        </section>
+            
+            <ButtonComponent className="mt-4" href="/equipment">Voir tout notre matériel</ButtonComponent>            
+        </div>
+
+        
     );
 }
