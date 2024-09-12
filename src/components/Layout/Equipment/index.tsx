@@ -6,9 +6,14 @@ interface EquipmentLayoutProps {
 }
 
 export function EquipmentLayout({ children }: EquipmentLayoutProps) {
+
+    
+    const links = [
+        { title: "Retour", href: "/" },
+    ]
     return (
         <>
-            <NavBarComponent scrolledValue={0} isAlreadyScrolled={true} />
+            <NavBarComponent scrolledValue={0} isAlreadyScrolled={true} links={links}/>
                 {children}
             <FooterComponent />
         </>
