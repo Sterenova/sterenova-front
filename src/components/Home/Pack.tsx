@@ -77,20 +77,26 @@ export function PackComponent() {
 
             <div className="grid md:grid-cols-2 grid-cols-1 flex-wrap gap-6 justify-center">
                 {packs.map((pack, index) => (
-                    <div key={index} className="bg-white shadow-lg rounded-xl p-6 transition-all hover:scale-105 mx-4">
+                    <div key={index} className="bg-white shadow-lg rounded-xl p-6 transition-all hover:scale-105 mx-4 flex flex-col justify-between h-full">
                         <h3 className="font-bold text-xl text-gray-800">{pack.name}</h3>
-                        <div className="space-y-4 mt-4">
+                        <div className="space-y-4 mt-4 flex-grow">
                             {pack.subPacks.map((subPack, index) => (
-                                <div key={index} className="p-4 rounded-lg bg-gray-100 shadow-sm">
+                                <div key={index} className="p-4 rounded-lg bg-gray-100 shadow-sm flex flex-col justify-between min-h-[150px]">
                                     <h4 className="font-semibold text-lg text-gray-700">{subPack.name}</h4>
-                                    <p className="text-gray-600 text-sm" dangerouslySetInnerHTML={{ __html: subPack.description }} />
+                                    <p className="text-gray-600 text-sm">
+                                        {subPack.description.split('<br/>').map((line, i) => (
+                                            <span key={i}>
+                                                {line}
+                                                <br />
+                                            </span>
+                                        ))}
+                                    </p>
                                     <p className="text-lg font-medium text-gray-800 mt-2">€{subPack.price}</p>
                                 </div>
                             ))}
-                            <div className="p-4 bg-gray-100 rounded-lg shadow-sm">
-                                <h4 className="font-semibold text-lg text-gray-700">{pack.name} Combo (Son + Lumières)</h4>
-                                <p className="text-lg font-medium text-gray-800 mt-2">€{pack.combinedPrice}</p>
-                            </div>
+                        </div>
+                        <div className="mt-4">
+                            <h6 className="font-semibold text-md text-gray-700">Combo (Son + Lumières) €{pack.combinedPrice}</h6>
                         </div>
                     </div>
                 ))}
