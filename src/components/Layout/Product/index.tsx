@@ -13,7 +13,7 @@ export function ProductLayout({ children }: EquipmentLayoutProps) {
 
     return (
         <>
-            <NavBarComponent scrolledValue={200} isAlreadyScrolled={false} links={links} />
+            <NavBarComponent scrolledValue={180} links={links} />
                 {children}
             <FooterComponent />
         </>
